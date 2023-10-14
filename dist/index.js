@@ -2759,8 +2759,7 @@ const core = __importStar(__nccwpck_require__(186));
  */
 async function run() {
     try {
-        // Set outputs for other workflow steps to use
-        core.setOutput('time', new Date().toTimeString());
+        core.info('Starting action');
     }
     catch (error) {
         // Fail the workflow run if an error occurs

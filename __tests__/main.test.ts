@@ -17,16 +17,26 @@ describe('action', () => {
     jest.clearAllMocks()
   })
 
+  it('logs a message', async () => {
+    // Verify that the function resolves
+    await main.run()
+    expect(runMock).toHaveReturned()
+
+    // Verify that the info function was called with the expected message
+    expect(infoMock).toHaveBeenNthCalledWith(1, 'Starting action')
+  })
+
   it('sets a failed status', async () => {
     const errorMessage = 'Info function failed'
 
     // Mock the log function to throw an error
-    infoMock.mockImplementationOnce(() => {
+    infoMock.mockImplementation(() => {
       throw new Error(errorMessage)
     })
 
     // Verify that the function throws the expected error
-    await expect(main.run()).resolves.toBeUndefined()
+    await main.run()
+    expect(runMock).toHaveReturned()
 
     // Verify that the setFailed function was called with the expected error message
     expect(setFailedMock).toHaveBeenNthCalledWith(1, errorMessage)
