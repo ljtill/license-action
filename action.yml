@@ -1,11 +1,6 @@
-name: 'The name of your action here'
-description: 'Provide a description here'
-author: 'Your name or organization here'
-
-# Define your outputs here.
-outputs:
-  time:
-    description: 'Your output description here'
+name: 'License'
+description: 'Checks source files for license header and license file exists.'
+author: 'Lyon Till'
 
 runs:
   using: node20
