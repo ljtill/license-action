@@ -1,16 +1,16 @@
 {
-  "name": "typescript-action",
-  "description": "GitHub Actions TypeScript template",
+  "name": "license-action",
+  "description": "GitHub Actions License Checker",
   "version": "0.0.0",
-  "author": "",
+  "author": "Lyon Till",
   "private": true,
-  "homepage": "https://github.com/actions/typescript-action",
+  "homepage": "https://github.com/ljtill/license-action",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/actions/typescript-action.git"
+    "url": "git+https://github.com/ljtill/license-action.git"
   },
   "bugs": {
-    "url": "https://github.com/actions/typescript-action/issues"
+    "url": "https://github.com/ljtill/license-action/issues"
   },
   "keywords": [
     "actions",
